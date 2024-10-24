@@ -1,8 +1,15 @@
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById('canvas');
+const startButton = document.querySelector('.button');
+const gamesIntro = document.getElementById('game-intro');
 
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getContext('2d');
 
 const game = new Game(ctx);
 
-game.start();
+startButton.addEventListener('click', () => {
+    gamesIntro.style.display = 'none';
+    canvas.style.display = 'block';
+    game.start();
+})
+
 

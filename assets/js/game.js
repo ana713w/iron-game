@@ -4,6 +4,8 @@ class Game {
 
         this.interval = null;
         this.started = false;
+
+        this.background = new Background(ctx);
     }
 
     start() {
@@ -24,10 +26,10 @@ class Game {
     }
 
     move() {
-
+        this.background.move();
     }
 
     draw() {
-
+        this.background.draw();
     }
  }
