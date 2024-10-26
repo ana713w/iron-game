@@ -7,7 +7,7 @@ class Background {
         this.w = this.ctx.canvas.width;
         this.h = this.ctx.canvas.height;
 
-        this.vy = -2;
+        this.vy = 2;
 
         this.img = new Image();
         this.img.src = '/assets/images/bg.png';
@@ -19,7 +19,7 @@ class Background {
         this.ctx.drawImage(
             this.img,
             this.x,
-            this.y + this.ctx.canvas.height,
+            this.y - this.ctx.canvas.height,
             this.w,
             this.h
         );
@@ -28,7 +28,7 @@ class Background {
     move() {
         this.y += this.vy;
 
-        if (this.y + this.h <= 0) {
+        if (this.y >= this.h) {
             this.y = 0;
         }
     }

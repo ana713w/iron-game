@@ -6,6 +6,9 @@ class Game {
         this.started = false;
 
         this.background = new Background(ctx);
+        this.player = new Player(ctx);
+
+        this.setListeners();
     }
 
     start() {
@@ -27,9 +30,21 @@ class Game {
 
     move() {
         this.background.move();
+        this.player.move();
     }
 
     draw() {
         this.background.draw();
+        this.player.draw();
+    }
+
+    setListeners() {
+        document.addEventListener("keydown", (event) => {
+            this.player.onKeyDown(event.keyCode);
+        });
+
+        document.addEventListener("keyup", (event) => {
+            this.player.onKeyUp(event.keyCode);
+        })
     }
  }
