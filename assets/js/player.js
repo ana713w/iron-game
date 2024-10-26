@@ -10,17 +10,15 @@ class Player {
 
         this.vx = 0;
 
-        this.ax = 0;
-
         this.img = new Image();
         this.img.frames = 2;
         this.img.frameIndex = 0;
         this.img.src = "/assets/images/ironman-Sheet.png";
+
+        this.bullets = [];
     }
 
     move() {
-        this.vx += this.ax;
-
         this.x += this.vx;
 
         if (this.x < 0) {
@@ -28,6 +26,8 @@ class Player {
         } else if (this.x + this.w > this.ctx.canvas.width) {
             this.x = this.ctx.canvas.width - this.w;
         }
+
+        this.bullets.forEach((b) => b.move());
 
     }
 
@@ -45,15 +45,33 @@ class Player {
             this.w,
             this.h
           );
+
+        this.bullets.forEach((b) => b.draw());
     }
+
+    fire() {
+        const bulletX = this.x + this.w / 2;
+        const bulletY = this.y;
+        const bullet = new Bullet(this.ctx, bulletX, bulletY);
+    
+        this.bullets.push(bullet);
+        this.img.frameIndex = 1; 
+
+        setTimeout(() => {
+            this.img.frameIndex = 0;
+        }, 100);
+  }
 
     onKeyDown(code) {
         switch (code) {
             case KEY_RIGHT:
-                this.vx = 5;
+                this.vx = 2;
                 break;
             case KEY_LEFT:
-                this.vx = -5;
+                this.vx = -2;
+                break;
+            case KEY_SPACE:
+                this.fire();
                 break;
         }
     }
