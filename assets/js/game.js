@@ -15,6 +15,7 @@ class Game {
     start() {
         this.started = true;
         let tick = 0;
+        let tickAlien = 50;
 
         this.interval = setInterval(() => {
             this.clear();
@@ -25,19 +26,23 @@ class Game {
 
             tick++;
 
-            if (tick >= 300) {
+            if (tick >= tickAlien) {
                 tick = 0;
                 this.addAlien();
+                if(tickAlien > 25) {
+                    tickAlien--;
+                }
+                console.log(tickAlien);
             }
 
         }, 1000 / 60);
     }
 
     addAlien() {
-        const newAlien = new Alien(this.ctx);
+        const AlienType = [RedAlien, GreenAlien, BlueAlien, YellowAlien];
+        const RandomAlienClass = AlienType[Math.floor(Math.random() * AlienType.length)];
+        const newAlien = new RandomAlienClass(this.ctx);  
         this.aliens.push(newAlien);
-
-        this.aliens = this.aliens.filter((e) => e.x + e.w > 0);
     }
 
     clear() {
