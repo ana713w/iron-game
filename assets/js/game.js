@@ -15,7 +15,7 @@ class Game {
     start() {
         this.started = true;
         let tick = 0;
-        let tickAlien = 50;
+        let tickAlien = 200;
 
         this.interval = setInterval(() => {
             this.clear();
@@ -29,6 +29,7 @@ class Game {
             if (tick >= tickAlien) {
                 tick = 0;
                 this.addAlien();
+
                 if(tickAlien > 25) {
                     tickAlien--;
                 }

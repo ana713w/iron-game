@@ -13,9 +13,10 @@ class Player {
         this.img = new Image();
         this.img.frames = 2;
         this.img.frameIndex = 0;
-        this.img.src = "/assets/images/ironman-Sheet.png";
+        this.img.src = IRONMAN_SPRITE;
 
         this.bullets = [];
+        this.bulletType = IronmanBullet;
     }
 
     move() {
@@ -50,9 +51,9 @@ class Player {
     }
 
     fire() {
-        const bulletX = this.x + this.w / 2;
+        const bulletX = (this.x + this.w / 2) - 10;
         const bulletY = this.y;
-        const bullet = new Bullet(this.ctx, bulletX, bulletY);
+        const bullet = new this.bulletType(this.ctx, bulletX, bulletY);
     
         this.bullets.push(bullet);
         this.img.frameIndex = 1; 
@@ -60,7 +61,7 @@ class Player {
         setTimeout(() => {
             this.img.frameIndex = 0;
         }, 100);
-  }
+    }
 
     onKeyDown(code) {
         switch (code) {
@@ -69,6 +70,22 @@ class Player {
                 break;
             case KEY_LEFT:
                 this.vx = -2;
+                break;
+            case KEY_1:
+                this.img.src = IRONMAN_SPRITE;
+                this.bulletType = IronmanBullet;
+                break;
+            case KEY_2:
+                this.img.src = CAPITAN_SPRITE;
+                this.bulletType = CapitanBullet;
+                break;
+            case KEY_3:
+                this.img.src = THOR_SPRITE;
+                this.bulletType = ThorBullet;
+                break;
+            case KEY_4:
+                this.img.src = HULK_SPRITE;
+                this.bulletType = HulkBullet;
                 break;
             case KEY_SPACE:
                 this.fire();
