@@ -30,7 +30,7 @@ class Player {
 
         this.bullets.forEach((b) => b.move());
 
-        this.bullets = this.bullets.filter((b) => b.x <= this.ctx.canvas.width);
+        this.bullets = this.bullets.filter((b) => b.x <= this.ctx.canvas.width); // los bullets fuera del canvas se eliminan
 
     }
 
@@ -53,7 +53,7 @@ class Player {
     }
 
     fire() {
-        const bulletX = (this.x + this.w / 2) - 10;
+        const bulletX = (this.x + this.w / 2);
         const bulletY = this.y;
         const bullet = new this.bulletType(this.ctx, bulletX, bulletY);
     

@@ -15,7 +15,7 @@ class Game {
     start() {
         this.started = true;
         let tick = 0;
-        let tickAlien = 200;
+        let tickAlien = 170;
 
         this.interval = setInterval(() => {
             this.clear();
@@ -51,6 +51,8 @@ class Game {
                 this.gameOver();
             }
 
+            
+
             this.player.bullets.forEach((bullet) => {
                 console.log(bullet);
                 console.log(alien);
@@ -58,7 +60,10 @@ class Game {
                     this.player.bullets = this.player.bullets.filter(b => b !== bullet);
                     alien.isExploding();
 
-                    //this.aliens = this.aliens.filter((a) => a !== alien);
+                    setTimeout(() => {
+                        this.aliens = this.aliens.filter((a) => a !== alien);
+                    }, 117);
+
                 }
             })
 
