@@ -18,6 +18,13 @@ class Bullet {
         this.y -= this.vy;
 
     }
+
+    collides(el) {
+        const colX = this.x + this.w >= el.x && this.x <= el.x + el.w;
+        const colY = this.y + this.h >= el.y && this.y <= el.y + el.h;
+    
+        return colX && colY;
+    }
 }
 
 class IronmanBullet  extends Bullet{
@@ -26,6 +33,8 @@ class IronmanBullet  extends Bullet{
 
         this.w = 6;
         this.h = 20;
+
+        this.destroyableAlien = RedAlien;
 
         this.img.src = IRONMAN_BULLET;
     }
@@ -38,6 +47,8 @@ class CapitanBullet  extends Bullet{
         this.w = 20;
         this.h = 17;
 
+        this.destroyableAlien = BlueAlien;
+
         this.img.src = CAPITAN_BULLET;
     }
 }
@@ -49,6 +60,8 @@ class ThorBullet  extends Bullet{
         this.w = 24;
         this.h = 24;
 
+        this.destroyableAlien = YellowAlien;
+
         this.img.src = THOR_BULLET;
     }
 }
@@ -59,6 +72,8 @@ class HulkBullet  extends Bullet{
 
         this.w = 36;
         this.h = 18;
+
+        this.destroyableAlien = GreenAlien;
 
         this.img.src = HULK_BULLET;
     }

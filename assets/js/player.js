@@ -30,6 +30,8 @@ class Player {
 
         this.bullets.forEach((b) => b.move());
 
+        this.bullets = this.bullets.filter((b) => b.x <= this.ctx.canvas.width);
+
     }
 
     draw() {
@@ -61,6 +63,13 @@ class Player {
         setTimeout(() => {
             this.img.frameIndex = 0;
         }, 100);
+    }
+
+    collides(alien) {
+        const colX = alien.x <= this.x + this.w && alien.x + alien.w >= this.x;
+        const colY = alien.y <= this.y + this.h && alien.y + alien.h >= this.y;
+
+        return colX && colY;
     }
 
     onKeyDown(code) {

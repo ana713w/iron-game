@@ -24,6 +24,8 @@ class Game {
 
             this.draw();
 
+            this.collisions();
+
             tick++;
 
             if (tick >= tickAlien) {
@@ -33,10 +35,34 @@ class Game {
                 if(tickAlien > 25) {
                     tickAlien--;
                 }
-                console.log(tickAlien);
             }
 
         }, 1000 / 60);
+    }
+
+    gameOver() {
+        this.started = false;
+        clearInterval(this.interval);
+    }
+
+    collisions() {
+        this.aliens.forEach((alien) => {
+            if (this.player.collides(alien)) {
+                this.gameOver();
+            }
+
+            this.player.bullets.forEach((bullet) => {
+                console.log(bullet);
+                console.log(alien);
+                if (bullet.collides(alien) && bullet.destroyableAlien === alien.constructor) {
+                    this.player.bullets = this.player.bullets.filter(b => b !== bullet);
+                    alien.isExploding();
+
+                    //this.aliens = this.aliens.filter((a) => a !== alien);
+                }
+            })
+
+        });
     }
 
     addAlien() {

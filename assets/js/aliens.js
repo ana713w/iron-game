@@ -6,15 +6,45 @@ class Alien {
         this.x = Math.random() * (ctx.canvas.width - 40);
 
         this.img = new Image();
+
+        this.imgExplote = new Image();
+        this.imgExplote.src = "/assets/images/exploting-Sheet.png";
+        this.imgExplote.frames = 7;
+        this.imgExplote.frameIndex = 0;
+
+        this.isDestroyed = false;
     }
 
     draw() {
-        this.ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
+        if (this.isDestroyed) {
+            this.ctx.drawImage(
+                this.imgExplote,
+                (this.imgExplote.frameIndex / this.imgExplote.frames) * this.imgExplote.width,
+                0,
+                (1 / this.imgExplote.frames) * this.imgExplote.width,
+                this.imgExplote.height,
+                this.x,
+                this.y,
+                this.w,
+                this.h
+              );
+
+            this.imgExplote.frameIndex++;
+
+        } else {
+            this.ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
+        }
     }
 
     move() {
         this.y += this.vy;
     }
+
+    isExploding() {
+        this.isDestroyed = true;
+        this.vy = 0;
+    }
+
 }
 
 class RedAlien extends Alien {
@@ -25,6 +55,8 @@ class RedAlien extends Alien {
         this.h = 32;
 
         this.vy = 1;
+
+        this.
 
         this.img.src = "/assets/images/red.png"
     }
