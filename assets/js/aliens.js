@@ -56,7 +56,7 @@ class RedAlien extends Alien {
 
         this.vy = 1;
 
-        this.
+        this.score = 2;
 
         this.img.src = "/assets/images/red.png"
     }
@@ -71,6 +71,8 @@ class GreenAlien extends Alien {
 
         this.vy = 0.8;
 
+        this.score = 1;
+
         this.img.src = "/assets/images/green.png"
     }
 }
@@ -84,6 +86,8 @@ class BlueAlien extends Alien {
 
         this.vy = 1.2;
 
+        this.score = 3;
+
         this.img.src = "/assets/images/blue.png"
     }
 }
@@ -96,6 +100,8 @@ class YellowAlien extends Alien {
         this.h = 32;
 
         this.vy = 1.5;
+
+        this.score = 4;
 
         this.img.src = "/assets/images/yellow.png"
     }

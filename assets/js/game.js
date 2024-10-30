@@ -10,12 +10,20 @@ class Game {
         this.aliens = [new Alien(ctx)];
 
         this.setListeners();
+
+        this.score = 0;
+
+        this.audioShoot = new Audio("/assets/audio/shoot.mp3");
+        this.audioShoot.volume = 0.03;
+
+        this.audioGameOver = new Audio("/assets/audio/game-over.mp3");
+        this.audioGameOver.volume = 0.03;
     }
 
     start() {
         this.started = true;
         let tick = 0;
-        let tickAlien = 170;
+        let tickAlien = 110;
 
         this.interval = setInterval(() => {
             this.clear();
@@ -41,6 +49,9 @@ class Game {
     }
 
     gameOver() {
+        this.audioShoot.pause();
+        this.audioGameOver.play();
+
         this.started = false;
         clearInterval(this.interval);
     }
@@ -50,15 +61,19 @@ class Game {
             if (this.player.collides(alien)) {
                 this.gameOver();
             }
-
             
+            if((alien.y + alien.h) >= this.ctx.canvas.height) {
+                this.gameOver();
+            }
 
             this.player.bullets.forEach((bullet) => {
-                console.log(bullet);
-                console.log(alien);
+
                 if (bullet.collides(alien) && bullet.destroyableAlien === alien.constructor) {
                     this.player.bullets = this.player.bullets.filter(b => b !== bullet);
                     alien.isExploding();
+                    this.audioShoot.play();
+
+                    this.score += alien.score;
 
                     setTimeout(() => {
                         this.aliens = this.aliens.filter((a) => a !== alien);
@@ -90,7 +105,13 @@ class Game {
     draw() {
         this.background.draw();
         this.player.draw();
+
+        this.ctx.font = "16px 'Press Start 2P'";
+        this.ctx.fillStyle = "#FFD700";
+        ctx.fillText(`SCORE: ${this.score}`, 20, 35);
+
         this.aliens.forEach(alien => alien.draw());
+
     }
 
     setListeners() {

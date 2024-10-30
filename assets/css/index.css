@@ -17,7 +17,7 @@ canvas {
     border: 1px solid white;
 }
 
-#game-intro {
+.intro {
     position: absolute; 
     top: 50%;
     left: 50%;

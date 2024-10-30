@@ -5,7 +5,7 @@ class Bullet {
         this.x = x;
         this.y = y;
 
-        this.vy = 10;
+        this.vy = 15;
 
         this.img = new Image();
     }
