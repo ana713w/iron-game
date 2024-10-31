@@ -52,6 +52,12 @@ class Game {
         this.audioShoot.pause();
         this.audioGameOver.play();
 
+        gamesOver.style.visibility = "visible";
+
+        let textScore = document.getElementById("score");
+
+        textScore.textContent = `SCORE : ${this.score}`;
+        
         this.started = false;
         clearInterval(this.interval);
     }

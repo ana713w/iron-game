@@ -32,6 +32,35 @@ canvas {
     margin-top: 60px;
 }
 
+#score {
+    font-size: 1.2em;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #FFD700;
+    padding: 15px;
+    border-radius: 5%;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+.game-over {
+    width: 500px;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    z-index: 10;
+    justify-content: center;
+}
+
 .button {
     font-size: 1.2em;
     font-family: 'Press Start 2P', cursive;
