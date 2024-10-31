@@ -19,7 +19,7 @@ startButton.addEventListener('click', () => {
 restartButton.addEventListener('click', () => {
     gamesOver.style.display = 'none';
     canvas.style.display = 'block';
-    game.start();
+    game.reset();
 })
 
 

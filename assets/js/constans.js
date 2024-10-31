@@ -17,3 +17,8 @@ const THOR_BULLET = "/assets/images/bullet-thor.png";
 
 const HULK_SPRITE = "/assets/images/hulk-Sheet.png";
 const HULK_BULLET = "/assets/images/bullet-hulk.png";
+
+const ironmanPoster = document.getElementById('ironman_poster');
+const capitanPoster = document.getElementById('capitan_poster');
+const thorPoster = document.getElementById('thor_poster');
+const hulkPoster = document.getElementById('hulk_poster');

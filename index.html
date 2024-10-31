@@ -7,19 +7,68 @@
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-    <canvas class="intro" id="canvas" width="500" height="800"></canvas>
-    <div class="intro" id="game-intro">
-        <img src="assets/images/game-intro-title.png">
-        <div class="container-button">
-            <button class="button" id="button-intro">START</button>
+    <div  class="main-container">
+        <div class="container">
+            <p>CHOOSE YOUR AVENGER</p>
+            <div class="avengers">
+                <div class="player-key">
+                    <img id="ironman_poster" src="assets/images/ironman_poster.png">
+                    <img src="assets/images/number-1.png">
+                </div>
+                <div class="player-key">
+                    <img id="capitan_poster" src="assets/images/capitan_poster.png">
+                    <img src="assets/images/number-2.png">
+                </div>
+                <div class="player-key">
+                    <img id="thor_poster" src="assets/images/thor_poster.png">
+                    <img src="assets/images/number-3.png">
+                </div>
+                <div class="player-key">
+                    <img id="hulk_poster" src="assets/images/hulk_poster.png">
+                    <img src="assets/images/number-4.png">
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="game-over" id="game-over">
-        <h2>GAME OVER</h2>
-        <p id="score"></p>
-        <img src="assets/images/game-over.png">
-        <div class="container-button">
-            <button class="button" id="button-game-over">START AGAIN</button>
+        <div class="container">
+            <canvas id="canvas" width="500" height="800"></canvas>
+            <div class="intro" id="game-intro">
+                <img src="assets/images/game-intro-title.png">
+                <div class="container-button">
+                    <button class="button" id="button-intro">START</button>
+                </div>
+            </div>
+            <div class="game-over" id="game-over">
+                <h2>GAME OVER</h2>
+                <p id="score"></p>
+                <img src="assets/images/game-over.png">
+                <div class="container-button">
+                    <button class="button" id="button-game-over">START AGAIN</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <table>
+                <tr>
+                <th><img src="assets/images/ironman-1.png"></th>
+                <th><p>kill to</p></th>
+                <th><img class="alien" src="assets/images/red.png"></th>
+                </tr>
+                <tr>
+                    <th><img src="assets/images/capitan-1.png"></th>
+                    <th><p>kill to</p></th>
+                    <th><img class="alien" src="assets/images/blue.png"></th>
+                </tr>
+                <tr>
+                    <th><img src="assets/images/thor-1.png"></th>
+                    <th><p>kill to</p></th>
+                    <th><img class="alien" src="assets/images/yellow.png"></th>
+                </tr>
+                <tr>
+                    <th><img src="assets/images/hulk-1.png"></th>
+                    <th><p>kill to</p></th>
+                    <th><img class="alien" src="assets/images/green.png"></th>
+                </tr>
+            </table>    
         </div>
     </div>
     <script src="assets/js/bullet.js"></script>

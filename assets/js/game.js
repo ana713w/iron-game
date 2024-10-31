@@ -62,6 +62,41 @@ class Game {
         clearInterval(this.interval);
     }
 
+    reset() {
+        this.score = 0;
+
+        this.player = new Player(ctx);
+        
+        this.aliens = [new Alien(ctx)];
+
+        this.started = true;
+
+        let tick = 0;
+        let tickAlien = 110;
+
+        this.interval = setInterval(() => {
+            this.clear();
+
+            this.move();
+
+            this.draw();
+
+            this.collisions();
+
+            tick++;
+
+            if (tick >= tickAlien) {
+                tick = 0;
+                this.addAlien();
+
+                if(tickAlien > 25) {
+                    tickAlien--;
+                }
+            }
+
+        }, 1000 / 60);
+    }
+
     collisions() {
         this.aliens.forEach((alien) => {
             if (this.player.collides(alien)) {
