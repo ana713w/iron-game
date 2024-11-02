@@ -14,7 +14,7 @@ To stop the alien invasion, each avenger must kill the right enemy.
 - Iron Man must kill the 🔴Red Alien with his laser.
 - Captain America must kill the 🔵Blue Alien with his shield.
 - Thor must kill the 🟡Yellow Alien with his hammer.
-- Hulk must kill the 🟢Green Alien with his hammer.
+- Hulk must kill the 🟢Green Alien with Hulk.
 
 No avenger can help another. Only the right avenger can defeat the enemy and save the earth.
 
