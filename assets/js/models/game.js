@@ -42,7 +42,7 @@ class Game {
                 tick = 0;
                 this.addAlien();
 
-                if(tickAlien > 25) {
+                if(tickAlien > 20) {
                     tickAlien--;
                 }
             }
