@@ -86,6 +86,17 @@ table {
     justify-content: center;
 }
 
+#fname {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: white;
+    background-color: transparent; 
+    border: 2px solid white; 
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
 .button {
     font-size: 1.2em;
     font-family: 'Press Start 2P', cursive;

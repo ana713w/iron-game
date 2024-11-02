@@ -75,10 +75,10 @@ class Player {
     onKeyDown(code) {
         switch (code) {
             case KEY_RIGHT:
-                this.vx = 8;
+                this.vx = 7;
                 break;
             case KEY_LEFT:
-                this.vx = -8;
+                this.vx = -7;
                 break;
             case KEY_1:
                 this.img.src = IRONMAN_SPRITE;

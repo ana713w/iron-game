@@ -28,11 +28,40 @@
                     <img src="assets/images/number-4.png">
                 </div>
             </div>
+            </br>
+            <table>
+                <tr>
+                    <th><img src="assets/images/ironman-1.png"></th>
+                    <th><img src="assets/images/space.png"></th>
+                    <th><p>kill to</p></th>
+                    <th><img class="alien" src="assets/images/red.png"></th>
+                </tr>
+                <tr>
+                    <th><img src="assets/images/capitan-1.png"></th>
+                    <th><img src="assets/images/space.png"></th>
+                    <th><p>kill to</p></th>
+                    <th><img class="alien" src="assets/images/blue.png"></th>
+                </tr>
+                <tr>
+                    <th><img src="assets/images/thor-1.png"></th>
+                    <th><img src="assets/images/space.png"></th>
+                    <th><p>kill to</p></th>
+                    <th><img class="alien" src="assets/images/yellow.png"></th>
+                </tr>
+                <tr>
+                    <th><img src="assets/images/hulk-1.png"></th>
+                    <th><img src="assets/images/space.png"></th>
+                    <th><p>kill to</p></th>
+                    <th><img class="alien" src="assets/images/green.png"></th>
+                </tr>
+            </table>  
         </div>
         <div class="container">
             <canvas id="canvas" width="500" height="800"></canvas>
             <div class="intro" id="game-intro">
                 <img src="assets/images/game-intro-title.png">
+                <p >YOUR NAME</p>
+                <input type="text" id="fname" name="fname">
                 <div class="container-button">
                     <button class="button" id="button-intro">START</button>
                 </div>
@@ -42,31 +71,25 @@
                 <p id="score"></p>
                 <img src="assets/images/game-over.png">
                 <div class="container-button">
-                    <button class="button" id="button-game-over">START AGAIN</button>
+                    <button class="button" id="button-game-over">TRY AGAIN</button>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container"> 
+            <img src="assets/images/cup.png">
+            <p>RANKING</p>
             <table>
                 <tr>
-                <th><img src="assets/images/ironman-1.png"></th>
-                <th><p>kill to</p></th>
-                <th><img class="alien" src="assets/images/red.png"></th>
+                <th><img src="assets/images/medal_1.png">
+                <th><p id="rank1"></p></th>
                 </tr>
                 <tr>
-                    <th><img src="assets/images/capitan-1.png"></th>
-                    <th><p>kill to</p></th>
-                    <th><img class="alien" src="assets/images/blue.png"></th>
+                    <th><img src="assets/images/medal_2.png"></th>
+                    <th><p id="rank2"></p></th>
                 </tr>
                 <tr>
-                    <th><img src="assets/images/thor-1.png"></th>
-                    <th><p>kill to</p></th>
-                    <th><img class="alien" src="assets/images/yellow.png"></th>
-                </tr>
-                <tr>
-                    <th><img src="assets/images/hulk-1.png"></th>
-                    <th><p>kill to</p></th>
-                    <th><img class="alien" src="assets/images/green.png"></th>
+                    <th><img src="assets/images/medal_3.png">
+                    <th><p id="rank3" ></p></th>
                 </tr>
             </table>    
         </div>

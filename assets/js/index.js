@@ -3,23 +3,29 @@ const startButton = document.getElementById('button-intro');
 const restartButton = document.getElementById('button-game-over');
 const gamesIntro = document.getElementById('game-intro');
 const gamesOver = document.getElementById('game-over');
+const formName = document.getElementById('fname');
 
 gamesOver.style.visibility = "hidden";
 
 const ctx = canvas.getContext('2d');
 
 const game = new Game(ctx);
+game.loadScores();
 
 startButton.addEventListener('click', () => {
-    gamesIntro.style.display = 'none';
-    canvas.style.display = 'block';
-    game.start();
+    if (formName.value.trim() === ""){
+        alert("Por favor, ingresa tu nombre para empezar el juego :)");
+        return;
+    } else {
+        gamesIntro.style.display = 'none';
+        canvas.style.display = 'block';
+        game.playerName = formName.value.trim();
+        game.start();
+    }
 })
 
 restartButton.addEventListener('click', () => {
-    gamesOver.style.display = 'none';
-    canvas.style.display = 'block';
-    game.reset();
+    window.location.reload();
 })
 
 
