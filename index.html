@@ -8,8 +8,48 @@
     <link rel="icon" href="assets/images/favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
-    <div  class="main-container">
-        <div class="container">
+    <div>
+        <canvas id="canvas" width="500" height="800"></canvas>
+        <div class="intro" id="game-intro">
+            <img src="assets/images/game-intro-title.png">
+            <p >YOUR NAME</p>
+            <input type="text" id="fname" name="fname">
+            <div class="container-button">
+                <button class="button" id="button-intro">START</button>
+            </div>
+            <div>
+                <button class="button-small" id="button-instructions">QUICK INSTRUCTIONS</button>
+                <button class="button-small" id="button-ranking">RANKING</button>
+            </div>
+        </div>
+        <div class="game-over" id="game-over">
+            <h2>GAME OVER</h2>
+            <p id="score"></p>
+            <img src="assets/images/game-over.png">
+            <div class="container-button">
+                <button class="button" id="button-game-over">TRY AGAIN</button>
+            </div>
+        </div>
+        <div class="intro" id="ranking">
+            <img src="assets/images/cup.png">
+            <p>RANKING</p>
+            <table>
+                <tr>
+                    <th><img src="assets/images/medal_1.png">
+                    <th><p id="rank1"></p></th>
+                </tr>
+                <tr>
+                    <th><img src="assets/images/medal_2.png"></th>
+                    <th><p id="rank2"></p></th>
+                </tr>
+                <tr>
+                    <th><img src="assets/images/medal_3.png">
+                    <th><p id="rank3" ></p></th>
+                </tr>
+            </table>  
+            <button class="button-small" id="button-back-r">🡠 BACK</button>
+        </div>
+        <div class="intro" id="instructions">
             <p>CHOOSE YOUR AVENGER</p>
             <div class="avengers">
                 <div class="player-key">
@@ -56,43 +96,7 @@
                     <th><img class="alien" src="assets/images/green.png"></th>
                 </tr>
             </table>  
-        </div>
-        <div class="container">
-            <canvas id="canvas" width="500" height="800"></canvas>
-            <div class="intro" id="game-intro">
-                <img src="assets/images/game-intro-title.png">
-                <p >YOUR NAME</p>
-                <input type="text" id="fname" name="fname">
-                <div class="container-button">
-                    <button class="button" id="button-intro">START</button>
-                </div>
-            </div>
-            <div class="game-over" id="game-over">
-                <h2>GAME OVER</h2>
-                <p id="score"></p>
-                <img src="assets/images/game-over.png">
-                <div class="container-button">
-                    <button class="button" id="button-game-over">TRY AGAIN</button>
-                </div>
-            </div>
-        </div>
-        <div class="container"> 
-            <img src="assets/images/cup.png">
-            <p>RANKING</p>
-            <table>
-                <tr>
-                <th><img src="assets/images/medal_1.png">
-                <th><p id="rank1"></p></th>
-                </tr>
-                <tr>
-                    <th><img src="assets/images/medal_2.png"></th>
-                    <th><p id="rank2"></p></th>
-                </tr>
-                <tr>
-                    <th><img src="assets/images/medal_3.png">
-                    <th><p id="rank3" ></p></th>
-                </tr>
-            </table>    
+            <button class="button-small" id="button-back-i">🡠 BACK</button>
         </div>
     </div>
     <script src="assets/js/models/bullet.js"></script>

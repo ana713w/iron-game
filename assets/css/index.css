@@ -12,21 +12,6 @@ body {
     font-family: 'Press Start 2P', cursive;
 }
 
-.main-container {
-    display: flex; 
-    flex-direction: row; 
-    width: 100%;
-    gap: 20px; 
-}
-
-.container {
-    flex: 1; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center;
-}
-
 canvas {
     display: block; 
     position: relative; 
@@ -99,38 +84,63 @@ table {
 
 .button {
     font-size: 1.2em;
+    cursor: pointer;
     font-family: 'Press Start 2P', cursive;
     width: 200px;
     height: 70px;
     background: #3459CB;
     border: 0px;
     position: relative;
+    margin-bottom: 40px;
     box-shadow: 
       inset -4px 2px 1px 1px grey,
       inset -4px -2px 1px 1px lightgray,
       inset 4px 0px 1px 1px lightgray;   
+}
+
+.button-small {
+    font-size: 0.6em;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    background-color: transparent;
+    border: 0px;
+    display: inline-block;
+    text-decoration: none;
+    position: relative; 
+    line-height: 16px; 
+}
+  
+.button-small:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    transition: all .8s;
   }
   
-  .button:hover {
+.button-small:hover:after {
+    width: 100%;
+    background: white;
+  }
+  
+.button:hover {
     cursor: pointer;
       background-color: #5c82f3;
-  }
+}
 
-  .avengers {
+.avengers {
     display: flex;
     flex-direction: row;
     gap: 25px;
-  }
+}
 
-  .player-key {
+.player-key {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-  }
-
-  .player-select {
-    box-shadow: 0 0 0 5px white;
-  }
+}
 
 
