@@ -10,7 +10,7 @@ class Background {
         this.vy = 2;
 
         this.img = new Image();
-        this.img.src = '/assets/images/bg.png';
+        this.img.src = 'assets/images/bg.png';
     }
 
     draw() {

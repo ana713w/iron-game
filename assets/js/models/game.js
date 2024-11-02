@@ -15,10 +15,10 @@ class Game {
 
         this.score = 0;
 
-        this.audioShoot = new Audio("/assets/audio/shoot.mp3");
+        this.audioShoot = new Audio("assets/audio/shoot.mp3");
         this.audioShoot.volume = 0.03;
 
-        this.audioGameOver = new Audio("/assets/audio/game-over.mp3");
+        this.audioGameOver = new Audio("assets/audio/game-over.mp3");
         this.audioGameOver.volume = 0.03;
     }
 

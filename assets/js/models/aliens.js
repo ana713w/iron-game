@@ -8,7 +8,7 @@ class Alien {
         this.img = new Image();
 
         this.imgExplote = new Image();
-        this.imgExplote.src = "/assets/images/exploting-Sheet.png";
+        this.imgExplote.src = "assets/images/exploting-Sheet.png";
         this.imgExplote.frames = 7;
         this.imgExplote.frameIndex = 0;
 
@@ -58,7 +58,7 @@ class RedAlien extends Alien {
 
         this.score = 2;
 
-        this.img.src = "/assets/images/red.png"
+        this.img.src = "assets/images/red.png"
     }
 }
 
@@ -73,7 +73,7 @@ class GreenAlien extends Alien {
 
         this.score = 1;
 
-        this.img.src = "/assets/images/green.png"
+        this.img.src = "assets/images/green.png"
     }
 }
 
@@ -88,7 +88,7 @@ class BlueAlien extends Alien {
 
         this.score = 3;
 
-        this.img.src = "/assets/images/blue.png"
+        this.img.src = "assets/images/blue.png"
     }
 }
 
@@ -103,6 +103,6 @@ class YellowAlien extends Alien {
 
         this.score = 4;
 
-        this.img.src = "/assets/images/yellow.png"
+        this.img.src = "assets/images/yellow.png"
     }
 }
