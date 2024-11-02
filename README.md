@@ -29,7 +29,7 @@ To change Avenger press keys 1, 2, 3 or 4.
 - To select **Thor** press **key 3**
 - To select **Hulk** press **key 4**
 
-To **shoot** press the **Space key**
+- To **shoot** press the **Space key**
 
 ## ATENTION
 Not all enemies are the same.
