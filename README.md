@@ -1,7 +1,5 @@
 # SPACE AVENGERS
 
-Link to demo: https://ana713w.github.io/space-avengers/
-
 ![giphy](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWpxd3htaHh4M2NibDBxOHV3emZkNHY0ZXl0NjR2cXNpdHdzazFheiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/S7v0KTxpWQJVZFbRFa/giphy.gif)
 
 ## Link to Game
